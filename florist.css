@@ -1,0 +1,6 @@
+.main-button{
+    color: gray;
+}
+.main-button:hover{
+    color: orange;
+}
