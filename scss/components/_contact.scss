@@ -1,0 +1,25 @@
+.kontakt-title {
+    max-width: 606px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.kontakt-section {
+    padding-bottom: 96px;
+}
+
+.contact-text {
+    color: var(--color-brand-dark);
+    margin-bottom: 42px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
