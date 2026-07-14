@@ -1,60 +1,54 @@
-.chefs-title {
-    margin: 0 auto 80px;
-    position: relative;
-}
+.chefs-section {
+    &__title {
+            margin: 0 auto 24px;
+            position: relative;
 
-.cookers-card {
-    display: flex;
-    gap: 30px;
-}
+            @media screen and (min-width: $bp-laptop) {
+                    margin-bottom: 80px;
 
-.chefs-card {
-    border-radius: 4px 4px 4px 200px;
-    box-shadow: -16px 16px 0 0 var(--color-primary-light),
-        -16px 16px 0 2px var(--color-secondary-light);
-}
+                }
 
-.chefs-title::before {
-    position: absolute;
-    left: 0;
-    bottom: 24px;
-}
+            &::before {
+                    position: absolute;
+                    left: 0;
+                    bottom: 24px;
+                }
+            
+            &::after {
+                    position: absolute;
+                    right: 0;
+                    bottom: 24px;
+                }
+            
+            &::before,
+            &::after {
+                display: none;
+                    width: 352px;
+                    border: 2px solid var(--color-brand-light);
+                    content: '';
+                    
+                    @media screen and (min-width: $bp-laptop) {
+                        display: block;
+                }
+        }
+    }
+     &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex-wrap: wrap;
 
-.chefs-title::after {
-    position: absolute;
-    right: 0;
-    bottom: 24px;
-}
+            @media screen and (min-width: $bp-tablet) {
+                    flex-direction: row;
+                    gap: 40px 30px;
+                }
+        }
+    
+        &__item {
+            @media screen and (min-width: $bp-tablet) {
+                flex-basis: calc((100% - 30px) / 2);
+            }
+            
+        }
 
-.chefs-title::before,
-.chefs-title::after {
-    display: block;
-    width: 352px;
-    border: 2px solid var(--color-brand-light);
-    content: '';
-}
-
-.chefs-list {
-    display: flex;
-    gap: 40px 30px;
-    flex-wrap: wrap;
-}
-
-.chefs-item {
-    flex-basis: calc((100% - 30px) / 2);
-}
-
-.cookers-title {
-    margin-bottom: 16px;
-    font-weight: 600;
-    font-size: 40px;
-
-}
-
-.chef-text {
-    margin-bottom: 24px;
-}
-
-.chef-text:last-child {
-    margin-bottom: 0;
 }

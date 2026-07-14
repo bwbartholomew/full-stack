@@ -3,26 +3,53 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 32px;
+    padding-top: 16px;
+
+    @media screen and (min-width: $bp-laptop) {
+            padding-top: 32px;
+        }
+
+    &__container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+    
+        &__nav {
+            display: flex;
+            flex-grow: 1;
+            margin: 0;
+            align-items: center;
+            gap: 40px;
+        }
+    
+        &__menu {
+            display: none;
+
+            @media screen and (min-width: $bp-laptop) {
+                display: flex;
+                    gap: 64px;
+                    flex-grow: 1;
+                    justify-content: center;
+            }
+        }
+        &__button{
+            display: none;
+            @media screen and (min-width: $bp-laptop) {
+                    display: block;
+                }
+        }
+        &__burger{
+            display: block;
+            background-color: transparent;
+            border: none;
+            width: 24px;
+            height: 24px;
+            padding: 0;
+            fill: var(--color-primary-light);
+            @media screen and (min-width: $bp-laptop) {
+                    display: none;
+                }
+        }
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.header-nav {
-    display: flex;
-    flex-grow: 1;
-    margin: 0;
-    align-items: center;
-    gap: 40px;
-}
-
-.header-menu {
-    display: flex;
-    gap: 64px;
-    flex-grow: 1;
-    justify-content: center;
-}
